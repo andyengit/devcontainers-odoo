@@ -1,16 +1,17 @@
 version: "3"
 
 services:
-  odoo19-demo:
-    container_name: odoo19-demo
+  odoo-dev:
+    container_name: odoo-dev
     # image: mjavint/odoodev:19.0
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace
-      - ${ODOO_SERVER}:/workspace/odoo.19.0:ro
-      - ${ENTERPRISE_ADDONS}:/workspace/enterprise.19.0:ro
+      - ../odools.toml:/home/odoo/odools.toml
+      - ${ODOO_SERVER}:/workspace/odoo:ro
+      # - ${ENTERPRISE_ADDONS}:/workspace/enterprise:ro
       - odoo-data:/var/lib/odoo
     command: sleep infinity
     ports:
@@ -27,9 +28,11 @@ services:
     volumes:
       - pgdb-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=admin
-    ports:
-      - "5432:5432"
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
+    # ports:
+    #   - "5432:5433"
     networks:
       - shared-net
 

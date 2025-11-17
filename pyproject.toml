@@ -1,10 +1,16 @@
 [project]
-name = "odoo19"
+name = "odoo"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "inotify",
+    "setuptools",
+    "opencv-python",
+    "pytesseract",
+    "pdf2image",
+    "aiohttp",
     "num2words",
     "ofxparse",
     "dbfread",

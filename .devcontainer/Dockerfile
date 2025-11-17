@@ -39,6 +39,10 @@ RUN apt-get update && \
     liblcms2-dev \
     libblas-dev \
     libatlas-base-dev \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    libgl1 \
     zsh \
     lsb-release \
     rsync \
