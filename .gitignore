@@ -10,5 +10,10 @@ wheels/
 .venv
 .vscode
 uv.lock
-enterprise.19.0
-odoo.19.0
+enterprise
+odoo
+oca
+custom
+*.conf
+*.toml
+*.lock
