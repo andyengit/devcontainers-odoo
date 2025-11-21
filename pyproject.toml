@@ -11,6 +11,12 @@ dependencies = [
     "pytesseract",
     "pdf2image",
     "aiohttp",
+    "pycountry",
+    "pandas",
+    "gTTS",
+    "schwifty",
+    "xmlsig",
+    "nox",
     "num2words",
     "ofxparse",
     "dbfread",
@@ -36,3 +42,6 @@ dependencies = [
     "xmltodict",
     "suds",
 ]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["odoo/requirements.txt"]}

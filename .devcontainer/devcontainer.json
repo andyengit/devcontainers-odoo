@@ -9,7 +9,6 @@
         "ms-python.python",
         "ms-python.debugpy",
         "mvintg.odoo-file",
-        "trinhanhngoc.vscode-odoo",
         "odoo.owl-vision",
         "esbenp.prettier-vscode",
         "charliermarsh.ruff",
@@ -17,14 +16,16 @@
         "codezombiech.gitignore",
         "usernamehw.errorlens",
         "formulahendry.auto-complete-tag",
-        "mrorz.language-gettext"
+        "mrorz.language-gettext",
+        "odoo.odoo",
+        "eamodio.gitlens"
       ],
       "settings": {
         "python.languageServer": "None",
         "editor.tabSize": 4,
         "terminal.integrated.cursorStyle": "underline",
         "terminal.integrated.cursorBlinking": true,
-        "terminal.integrated.fontFamily": "MesloLGS NF",
+        "terminal.integrated.fontFamily": "Cascadia Code NF",
         "terminal.integrated.fontLigatures.enabled": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
         "python.defaultInterpreterPath": ".venv/bin/python",
