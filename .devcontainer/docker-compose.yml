@@ -10,7 +10,7 @@ services:
     volumes:
       - ..:/workspace
       - ../odools.toml:/home/odoo/odools.toml
-      - ${ODOO_SERVER}:/workspace/odoo:ro
+      - ${ODOO_SERVER}:/workspace/odoo
       # - ${ENTERPRISE_ADDONS}:/workspace/enterprise:ro
       - odoo-data:/var/lib/odoo
     command: sleep infinity

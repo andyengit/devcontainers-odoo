@@ -10,6 +10,7 @@
         "ms-python.debugpy",
         "mvintg.odoo-file",
         "odoo.owl-vision",
+        "trinhanhngoc.vscode-odoo",
         "esbenp.prettier-vscode",
         "charliermarsh.ruff",
         "DotJoshJohnson.xml",
@@ -17,7 +18,6 @@
         "usernamehw.errorlens",
         "formulahendry.auto-complete-tag",
         "mrorz.language-gettext",
-        "odoo.odoo",
         "eamodio.gitlens"
       ],
       "settings": {
