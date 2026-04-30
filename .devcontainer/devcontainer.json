@@ -7,6 +7,7 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
+        "ms-python.vscode-pylance",
         "ms-python.debugpy",
         "mvintg.odoo-file",
         "odoo.owl-vision",
@@ -21,7 +22,6 @@
         "eamodio.gitlens"
       ],
       "settings": {
-        "python.languageServer": "None",
         "editor.tabSize": 4,
         "terminal.integrated.cursorStyle": "underline",
         "terminal.integrated.cursorBlinking": true,
@@ -29,10 +29,21 @@
         "terminal.integrated.fontLigatures.enabled": true,
         "terminal.integrated.defaultProfile.linux": "zsh",
         "python.defaultInterpreterPath": ".venv/bin/python",
-        "python.terminal.activateEnvInCurrentTerminal": true
+        "python.terminal.activateEnvInCurrentTerminal": true,
+        "python.analysis.indexing": true,
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.extraPaths": [
+          "${workspaceFolder}/odoo",
+          "${workspaceFolder}/odoo/odoo",
+          "${workspaceFolder}/oca",
+          "${workspaceFolder}/custom",
+          "${workspaceFolder}/odoo/addons",
+          "${workspaceFolder}/odoo/odoo/addons"
+        ]
       }
     }
   },
+  "postCreateCommand": "uv sync && if [ -f odoo/requirements.txt ]; then uv pip install -r odoo/requirements.txt; fi",
   "mounts": [
     {
       "source": "zshhistory",

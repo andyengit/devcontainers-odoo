@@ -1,4 +1,4 @@
-FROM  python:3.12-slim-bookworm AS base
+FROM  python:3.12-bookworm AS base
 
 # Environment
 ENV PYTHONUNBUFFERED 1
@@ -14,6 +14,7 @@ RUN apt-get update && \
     adduser \
     build-essential \
     fonts-liberation2 \
+    tesseract-ocr \
     gsfonts \
     locales-all \
     gettext \
@@ -36,6 +37,8 @@ RUN apt-get update && \
     libffi-dev \
     libjpeg-dev \
     libpq-dev \
+    libcairo2-dev \
+    pkg-config \
     liblcms2-dev \
     libblas-dev \
     libatlas-base-dev \
@@ -46,6 +49,18 @@ RUN apt-get update && \
     zsh \
     lsb-release \
     rsync \
+    libcrypt1 \
+    libnss3 \
+    libnss3-dev \
+    libxtst6 \
+    libxrender1 \
+    libfontconfig1 \
+    libxi6 \
+    libgtk-3-0 \
+    libasound2 \
+    libxkbcommon0 \
+    libdbus-1-3 \
+    procps \
     && apt-get autoremove -yqq
 
 # Install rtlcss

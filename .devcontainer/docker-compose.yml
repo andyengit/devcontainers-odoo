@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   odoo-dev:
     container_name: odoo-dev
@@ -36,24 +34,24 @@ services:
     networks:
       - shared-net
 
-  pgadmin:
-    image: dpage/pgadmin4:latest
-    restart: unless-stopped
-    ports:
-      - "8085:80"
-    container_name: pgadmin
-    environment:
-      - PGADMIN_DEFAULT_EMAIL=admin@example.com
-      - PGADMIN_DEFAULT_PASSWORD=admin
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
-    networks:
-      - shared-net
+  # pgadmin:
+  #   image: dpage/pgadmin4:latest
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8085:80"
+  #   container_name: pgadmin
+  #   environment:
+  #     - PGADMIN_DEFAULT_EMAIL=admin@example.com
+  #     - PGADMIN_DEFAULT_PASSWORD=admin
+  #   volumes:
+  #     - pgadmin-data:/var/lib/pgadmin
+  #   networks:
+  #     - shared-net
 
 volumes:
   odoo-data:
   pgdb-data:
-  pgadmin-data:
+#  pgadmin-data:
 
 networks:
   shared-net:
